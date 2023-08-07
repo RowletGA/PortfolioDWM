@@ -1,0 +1,22 @@
+h1 {
+    color: rgb(23, 255, 73);
+    font-size: 24px;
+}
+
+/* Estilos para el encabezado h2 */
+h2 {
+    color: rgb(255, 64, 169);
+    font-size: 18px;
+}
+
+/* Estilos para el párrafo p */
+p {
+    color: black;
+    font-size: 16px;
+}
+
+/* Estilos para el contenedor */
+.container {
+    border: 1px solid gray;
+    padding: 10px;
+}
