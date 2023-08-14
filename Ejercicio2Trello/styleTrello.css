@@ -1,9 +1,9 @@
 h1 {
-    color: rgb(23, 255, 73);
+    color: rgb(0, 0, 0);
     font-size: 24px;
 }
 h2 {
-    color: rgb(255, 64, 169);
+    color: rgb(115, 64, 255);
     font-size: 18px;
 }
 p {
@@ -15,7 +15,7 @@ p {
     padding: 10px;
 }
 body {
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
 }
 #caja1 {
     width: 250px ;
