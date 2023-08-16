@@ -1,0 +1,63 @@
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+h2 {
+    color: #7340ff;
+    font-size: 18px;
+}
+p {
+    color: black;
+    font-size: 16px;
+}
+.container {
+    border: 1px solid rgb(128, 8, 8);
+    padding: 10px;
+}
+body {
+    background-color: #cabdfa;
+}
+.columna-tareas {
+    border: 1px solid #ddd;
+    background-color : #a4f9ff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 250px;
+
+
+}
+.Tarea {
+    background-color: rgb(210, 255, 240);
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2.5px;
+
+
+}
+.margen {
+    background-color: #a4f9ff;
+    border: 1px solid #ccc;
+    padding: 14px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2.5px;
+
+}
+.navbar-brand 
+{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.navbar-toggler
+{
+    background-color: rgb(210, 171, 255);
+}
+
+
+
+
