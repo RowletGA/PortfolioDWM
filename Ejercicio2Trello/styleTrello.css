@@ -17,16 +17,25 @@ p {
 body {
     background-color: rgb(255, 255, 255);
 }
-#caja1 {
-    width: 250px ;
-    height: 500px ;
-    background-color: aquamarine;
+.columna-tareas {
+    border: 1px solid #ddd;
+    background-color : #a4f9ff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+
 
 }
-#caja2 {
-    width: 250px ;
-    height: 500px ;
-    background-color: aquamarine;
+.Tarea {
+    background-color: rgb(210, 255, 240);
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2.5px;
 
 }
+
+
+
 

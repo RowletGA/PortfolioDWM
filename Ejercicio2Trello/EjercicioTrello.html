@@ -8,29 +8,38 @@
     <link href="styleTrello.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="text-center">
+    <div class="container-fluid">
+      <div class="text-center">
         <h1> Trellon't</h1>
-    
-        <div id="caja1">
-            <div class="container-sm">
-                <div class= "row">
-                    <div class="col-sm-4">
-                        <h2>Columna 1</h2>
-                        <p><strong>Tareas</strong></p> 
-                    </div>
-                    <div class="col-sm-4 ml-sm-auto"></div>
-                    <h2>Columna 2</h2>
-                            <p><strong>Tareas</strong></p> 
-                        </div>
+            <div class= "row">
+              <div class="col-sm-4">
+                <div class="columna-tareas">
+                  <h3><strong>Por Hacer</strong></h3>
+                  </div class ="Tarea">Tarea 1</div>
+                  </div class="Tarea"> Tarea2</div>
                 </div>
+              </div>
+              <div class="column-sm-4">
+                <div class="columna-tareas">
+                  <h3><strong>En progreso</strong></h3>
+                  <div class = "Tarea"> Tarea 3 </div>
+                  <div class="Tarea" > Tarea 4 </div>
+                  <form>
+                    <input type="text" name="nuevaTareaPorHacer" placeholder="Nueva tarea">
+                    <input type="submit" value="Agregar Tarea">
+                  </form>
+                  
+                </div>
+              </div>
+              <div class="column-sm-4">
+                <div class="columna-tareas">
+                  <h3><strong>Terminado</strong></h3>
+                  <div class="Tarea">Tarea 5 </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+      </div>
     </div>
-
-
-      
-
-
-
-  </body>
+</body>
 </html>
