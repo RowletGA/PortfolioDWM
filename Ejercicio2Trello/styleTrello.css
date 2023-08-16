@@ -57,7 +57,17 @@ body {
 {
     background-color: rgb(210, 171, 255);
 }
-
+.botoncito
+{
+    background-color: rgb(210, 171, 255);
+    border: 1px solid #ccc;
+    padding: 14px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2.5px;
+    width: 100px;
+    height: 100px;
+}
 
 
 

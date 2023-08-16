@@ -65,5 +65,25 @@
         </div>
     </div>
   </div>
+  <div id="container">
+    <div class = "botoncito"> 
+    <button>No apretar porfa </button>
+    </div>
+  </div>
+  <pre id="output"></pre>
+  
+  <script >
+      const output = document.querySelector("#output");
+  function handleClick(e) {
+    output.textContent += `Cerrando pagina\n`;
+  }
+
+  const container = document.querySelector("#container");
+  container.addEventListener("click", handleClick);
+
+
+
+
+  </script>
 </body>
 </html>
