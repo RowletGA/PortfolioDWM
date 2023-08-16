@@ -3,7 +3,7 @@ h1 {
     font-size: 24px;
 }
 h2 {
-    color: rgb(115, 64, 255);
+    color: #7340ff;
     font-size: 18px;
 }
 p {
@@ -15,7 +15,7 @@ p {
     padding: 10px;
 }
 body {
-    background-color: rgb(202, 189, 250);
+    background-color: #cabdfa;
 }
 .columna-tareas {
     border: 1px solid #ddd;
@@ -45,7 +45,17 @@ body {
     border-radius: 5px;
     box-shadow: 0px 2px 2.5px;
 
-
+}
+.navbar-brand 
+{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.navbar-toggler
+{
+    background-color: rgb(210, 171, 255);
 }
 
 

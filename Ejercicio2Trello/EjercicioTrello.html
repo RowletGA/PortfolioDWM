@@ -8,14 +8,31 @@
     <link href="styleTrello.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="container-fluid">
+    <!--<div class="container-"> -->
       <div class="text-center">
-        <div class="margen">
-          <h1> Trellon't</h1>
+      <!-- <div class="margen">-->  
+        <nav class="navbar navbar-dark" style="background-color:#a4f9ff;">
+          <span class="navbar-brand mb-0 h1">Trellon't</span>
+          <img src="58482beecef1014c0b5e4a36.png" width="30" height="30">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+         <!--<h1> Trellon't</h1> --> 
         </div>
           <div class= "row">
-            <div class="col-sm-3">
+            <div class="col-md-4">
               <div class="columna-tareas">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Boton de pruba</a>
+                    <a class="dropdown-item" href="#">Mover a en proceso</a>
+                    <a class="dropdown-item" href="#">Mover a terminado</a>
+                  </div>
+                </div>
                 <h3><strong>Por Hacer</strong></h3>
                 <div class="Tarea">Tarea1</div>
                 <div class="Tarea"> Tarea2</div>
@@ -25,11 +42,12 @@
                 </form>
               </div>
             </div>
-            <div class="column-sm-3">
+            <div class="col-sm-4">
               <div class="columna-tareas">
                 <h3><strong>En progreso</strong></h3>
                 <div class = "Tarea"> Tarea 3 </div>
                 <div class="Tarea" > Tarea 4 </div>
+                <img src="BhQjboGIYAAPLgs.jpg" width="226" height="250">
                 <form>
                   <input type="text" name="nuevaTareaPorHacer" placeholder="Nueva tarea">
                   <input type="submit" value="Agregar Tarea">
@@ -37,7 +55,7 @@
                 
               </div>
             </div>
-            <div class="column-sm-4">
+            <div class="col-md-4">
               <div class="columna-tareas">
                 <h3><strong>Terminado</strong></h3>
                 <div class="Tarea">Tarea 5 </div>
