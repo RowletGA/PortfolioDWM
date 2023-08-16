@@ -23,6 +23,7 @@ body {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+    width: 250px;
 
 
 }
@@ -33,6 +34,17 @@ body {
     margin: 5px 0;
     border-radius: 5px;
     box-shadow: 0px 2px 2.5px;
+
+
+}
+.margen {
+    background-color: #a4f9ff;
+    border: 1px solid #ccc;
+    padding: 14px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2.5px;
+
 
 }
 
