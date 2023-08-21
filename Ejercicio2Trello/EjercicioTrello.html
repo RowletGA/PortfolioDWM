@@ -23,16 +23,6 @@
           <div class= "row">
             <div class="col-md-4">
               <div class="columna-tareas">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Boton de pruba</a>
-                    <a class="dropdown-item" href="#">Mover a en proceso</a>
-                    <a class="dropdown-item" href="#">Mover a terminado</a>
-                  </div>
-                </div>
                 <h3><strong>Por Hacer</strong></h3>
                 <div class="Tarea">Tarea1</div>
                 <div class="Tarea"> Tarea2</div>
@@ -59,6 +49,11 @@
               <div class="columna-tareas">
                 <h3><strong>Terminado</strong></h3>
                 <div class="Tarea">Tarea 5 </div>
+                <form>
+                  <input type="text" name="nuevaTareaPorHacer" placeholder="Nueva tarea">
+                  <input type="submit" value="Agregar Tarea">
+                </form>
+                
               </div>
             </div>
           </div>
@@ -66,24 +61,15 @@
     </div>
   </div>
   <div id="container">
+    <div class = "Tarea"
+  <div id="container">
     <div class = "botoncito"> 
     <button>No apretar porfa </button>
     </div>
   </div>
   <pre id="output"></pre>
   
-  <script >
-      const output = document.querySelector("#output");
-  function handleClick(e) {
-    output.textContent += `Cerrando pagina\n`;
-  }
+  <script src="script.js" defer></script>
 
-  const container = document.querySelector("#container");
-  container.addEventListener("click", handleClick);
-
-
-
-
-  </script>
 </body>
 </html>
