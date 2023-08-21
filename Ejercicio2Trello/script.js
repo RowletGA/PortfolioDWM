@@ -14,14 +14,9 @@ function createParagraph() {
     document.body.appendChild(para);
   }
   
-  /*
-    1. Obtiene referencias de todos los botones de la página en un formato de arreglo.
-    2. Recorre todos los botones y agrega un detector de eventos 'click' a cada uno.
+
   
-    Cuando se presione cualquier botón, se ejecutará la función createParagraph().
-  */
-  
-  const buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll("button"); // Selecciona todos los botones de la página
   
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", createParagraph);
@@ -44,9 +39,6 @@ function createParagraph() {
           columnaTareas.insertBefore(nuevaTareaDiv, form); // Inserta el elemento div antes del formulario
   
           nuevaTareaInput.value = ""; // Limpiar el campo de entrada
-          
-      
-
         }
       });
     });
