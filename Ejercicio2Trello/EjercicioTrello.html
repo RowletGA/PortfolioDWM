@@ -34,9 +34,7 @@
             <div class="col-md-4">
               <div class="columna-tareas">
                 <h3><strong>Por Hacer</strong></h3>
-                <div class="Tarea">Tarea1</div>
-                <div class="Tarea"> Tarea2</div>
-                <form>
+                <form class="agregar-tarea-form">
                   <input type="text" name="nuevaTareaPorHacer" placeholder="Nueva tarea">
                   <input type="submit" value="Agregar Tarea">
                 </form>
@@ -45,10 +43,8 @@
             <div class="col-sm-4">
               <div class="columna-tareas">
                 <h3><strong>En progreso</strong></h3>
-                <div class = "Tarea"> Tarea 3 </div>
-                <div class="Tarea" > Tarea 4 </div>
                 <img src="BhQjboGIYAAPLgs.jpg" width="226" height="250">
-                <form>
+                <form class="agregar-tarea-form">
                   <input type="text" name="nuevaTareaPorHacer" placeholder="Nueva tarea">
                   <input type="submit" value="Agregar Tarea">
                 </form>
@@ -58,10 +54,13 @@
             <div class="col-md-4">
               <div class="columna-tareas">
                 <h3><strong>Terminado</strong></h3>
-                <div class="Tarea">Tarea 5 </div>
-                <form>
-                  <input type="text" name="nuevaTareaPorHacer" placeholder="Nueva tarea">
-                  <input type="submit" value="Agregar Tarea">
+                <form class="agregar-tarea-form">
+                  <div class="input-group">
+                    <input type="text" name="nuevaTareaPorHacer" class="form-control" placeholder="Nueva tarea">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="submit">Agregar Tarea</button>
+                    </div>
+                  </div>
                 </form>
                 
               </div>

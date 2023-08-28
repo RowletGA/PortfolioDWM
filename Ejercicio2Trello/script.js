@@ -1,48 +1,37 @@
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `Cerrando pagina\n`;
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const agregarTareaForms = document.querySelectorAll(".agregar-tarea-form");
 
-const container = document.querySelector("#container");
-container.addEventListener("click", handleClick);
+  agregarTareaForms.forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-// Función: crea un nuevo párrafo y lo agrega al final del cuerpo HTML.
+      const nuevaTareaInput = form.querySelector("input[name=nuevaTareaPorHacer]");
+      const nuevaTareaTexto = nuevaTareaInput.value.trim();
 
-function createParagraph() {
-    let para = document.createElement("p");
-    para.textContent = "You clicked the button!";
-    document.body.appendChild(para);
-  }
-  
+      if (nuevaTareaTexto !== "") {
+        const nuevaTareaDiv = document.createElement("div");
+        nuevaTareaDiv.classList.add("Tarea");
 
-  
-  const buttons = document.querySelectorAll("button"); // Selecciona todos los botones de la página
-  
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", createParagraph);
-  }
-  document.addEventListener("DOMContentLoaded", function () {
-    const formElements = document.querySelectorAll("form"); // Selecciona todos los formularios de la página
-    formElements.forEach(function (form) { // Recorre todos los formularios
-      form.addEventListener("submit", function (event) { // Agrega un detector de eventos 'submit' a cada formulario
-        event.preventDefault(); // Evitar el envío del formulario
-  
-        const nuevaTareaInput = form.querySelector("input[name=nuevaTareaPorHacer]");// Selecciona el campo de entrada de texto
-        const nuevaTareaTexto = nuevaTareaInput.value.trim();  // Obtiene el texto del campo de entrada de texto
-  
-        if (nuevaTareaTexto !== "") {     // Si el texto no está vacío
-          const nuevaTareaDiv = document.createElement("div"); // Crea un nuevo elemento div
-          nuevaTareaDiv.classList.add("Tarea"); // Agrega la clase 'Tarea' al elemento div
-          nuevaTareaDiv.textContent = nuevaTareaTexto; // Agrega el texto del campo de entrada de texto al elemento div
-  
-          const columnaTareas = form.closest(".columna-tareas"); // Selecciona la columna de tareas más cercana al formulario
-          columnaTareas.insertBefore(nuevaTareaDiv, form); // Inserta el elemento div antes del formulario
-  
-          nuevaTareaInput.value = ""; // Limpiar el campo de entrada
-        }
-      });
+        const tareaTexto = document.createElement("span");
+        tareaTexto.textContent = nuevaTareaTexto;
+
+        const eliminarBtn = document.createElement("button");
+        eliminarBtn.classList.add("btn", "btn-danger", "btn-sm", "eliminar-btn");
+        eliminarBtn.textContent = "Eliminar";
+
+        nuevaTareaDiv.appendChild(tareaTexto);
+        nuevaTareaDiv.appendChild(eliminarBtn);
+
+        const columnaTareas = form.closest(".columna-tareas");
+        columnaTareas.insertBefore(nuevaTareaDiv, form);
+
+        nuevaTareaInput.value = "";
+
+        eliminarBtn.addEventListener("click", function () {
+          const tareaDiv = eliminarBtn.closest(".Tarea");
+          tareaDiv.remove();
+        });
+      }
     });
   });
-
-  
-  
+});
