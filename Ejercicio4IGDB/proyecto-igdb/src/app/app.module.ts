@@ -6,18 +6,28 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { CardComponent } from './components/card/card.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    NavigationComponent,
+    CardComponent,
+    ModalComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

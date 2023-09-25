@@ -1,1 +1,18 @@
-<p>{{juegos.results[0].name}}</p>
+<!-- Header -->
+<app-header></app-header>
+
+<div class="container mt-4">
+  <!-- Barra de Búsqueda -->
+  <app-search-bar (onBuscar)="buscarJuegos($event)"></app-search-bar> <!-- Escucha el evento onBuscar -->
+
+  <!-- Cuerpo Principal -->
+  <div class="row">
+    <div class="col-md-3" *ngFor="let juego of juegos.results">
+      <!-- Card para cada juego -->
+      <app-card [juego]="juego"></app-card>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

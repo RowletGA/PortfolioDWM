@@ -16,5 +16,8 @@ export class JuegosService {
   obtenerJuegos(): Observable<JuegoResponse> {
     return this.http.get<JuegoResponse>(`${this.baseUrl}`)
   }
+  obtenerJuegosPorTermino(termino: string): Observable<JuegoResponse> {
+    const url = `${this.baseUrl}&search=${termino}`;
+    return this.http.get<JuegoResponse>(url);
+  }
 }
- 
