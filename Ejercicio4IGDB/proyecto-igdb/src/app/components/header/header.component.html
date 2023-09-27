@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
     <div class="menu-icon" (click)="toggleSideMenu()">
-      ☰ <!-- Puedes reemplazar esto con un ícono de FontAwesome u otra librería -->
+      ☰
     </div>
     <div class="logo">
       Steam Verde
@@ -12,14 +12,11 @@
   </div>
   <app-side-menu></app-side-menu>
 
-  <div *ngIf="juegos.length > 0" class="search-results">
-    <ul>
-      <li *ngFor="let juego of juegos">
-        <img [src]="juego.background_image" alt="{{ juego.name }}" /> 
-        <!-- Asumiendo que juego.background_image contiene la URL de la imagen del juego -->
-        {{ juego.name }}
-        <!-- Puedes añadir más información del juego o enlaces aquí -->
-      </li>
-    </ul>
+  <div *ngIf="juegos && juegos.length > 0" class="search-results lista-juegos">
+    <div class="juego-item" *ngFor="let juego of juegos">
+      <img [src]="juego.background_image" alt="{{ juego.name }}" />
+      <div>{{ juego.name }}</div>
+    </div>
   </div>
 </header>
+

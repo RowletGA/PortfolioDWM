@@ -1,8 +1,7 @@
-<div class="card mb-4">
-  <img [src]="juego.background_image" class="card-img-top img-fluid imagen-pequena" alt="...">
+<div class="card">
+  <img [src]="juego.background_image" alt="{{ juego.name }}" class="card-img-top" />
   <div class="card-body">
     <h5 class="card-title">{{ juego.name }}</h5>
-    <p class="card-text">{{ juego.description }}</p>
-    <a href="#" class="btn btn-primary">Ir al juego</a>
+    <button class="btn btn-primary" (click)="mostrarDetalles()">Ver más</button>
   </div>
 </div>

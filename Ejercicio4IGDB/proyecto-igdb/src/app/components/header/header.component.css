@@ -17,11 +17,11 @@
 }
 
 .logo {
-  font-size: 24px; /* O el tamaño que prefieras */
+  font-size: 24px; 
 }
 
 .search-bar {
-  /* Aquí puedes agregar estilos adicionales para tu barra de búsqueda si los necesitas */
+
 }
 
 
@@ -49,4 +49,35 @@
   max-width: 100%;
   height: auto;
   border-radius: 4px;
+}
+.lista-juegos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Esto crea tres columnas de igual ancho */
+  gap: 16px; /* Esto añade un poco de espacio entre cada artículo de la grilla */
+}
+
+.juego-item {
+  overflow: hidden; 
+}
+
+.juego-item img {
+ 
+  width: 100%; /* Esto hará que la imagen ocupe el 100% del ancho de su contenedor padre. */
+  max-width: 200px; /* Puedes ajustar este valor a lo que necesites. */
+  max-height: 150px; /* Puedes ajustar este valor a lo que necesites. */
+  display: block; /* Esto eliminará cualquier margen no deseado debajo de la imagen. */
+  object-fit: cover; /* Esto hará que la imagen cubra el área del contenedor sin distorsionarse. */
+}
+
+
+@media(min-width: 600px) {
+  .lista-juegos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 768px) {
+  .lista-juegos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

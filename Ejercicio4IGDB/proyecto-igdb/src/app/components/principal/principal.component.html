@@ -1,13 +1,11 @@
 <app-header></app-header>
 <div class="container mt-4">
   <app-search-bar (onBuscar)="buscar($event)"></app-search-bar>
-  <div class="row">
-    <div class="col-md-4 col-sm-6" *ngFor="let juego of juegos.results">
-      <app-card [juego]="juego" (click)="onSelect(juego)"></app-card>
+  <div class="row card-container">
+    <div class="col-md-4 col-sm-6 mb-4" *ngFor="let juego of juegos.results">
+      <app-card [juego]="juego" (verMas)="onSelect(juego)"></app-card>
     </div>
   </div>
-  <app-detalle *ngIf="juegoSeleccionado" [juego]="juegoSeleccionado"></app-detalle>
+  <app-modal [juego]="juegoSeleccionado" *ngIf="mostrarModal"></app-modal>
 </div>
 <app-footer></app-footer>
-
-

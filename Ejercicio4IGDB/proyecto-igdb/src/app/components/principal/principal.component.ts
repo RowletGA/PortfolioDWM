@@ -1,4 +1,3 @@
-// principal.component.ts
 
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { JuegoResponse, Result } from 'src/app/juego.interface';
@@ -45,5 +44,15 @@ export class PrincipalComponent implements OnInit {
   
   onSelect(juego: Result): void { 
     this.juegoSeleccionado = juego; 
+  }
+  mostrarModal: boolean = false;
+  
+  abrirModal(juego: Result): void {
+    this.juegoSeleccionado = juego;
+    this.mostrarModal = true;
+  }
+
+  cerrarModal(): void {
+    this.mostrarModal = false;
   }
 }
