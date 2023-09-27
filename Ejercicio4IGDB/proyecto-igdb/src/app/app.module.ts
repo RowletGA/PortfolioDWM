@@ -11,6 +11,9 @@ import { CardComponent } from './components/card/card.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { DetalleComponent } from './detalle.component';
+import { DetalleJuegoComponent } from './components/detalle-juego/detalle-juego.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     CardComponent,
     ModalComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DetalleComponent,
+    DetalleJuegoComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -16,8 +17,10 @@ export class JuegosService {
   obtenerJuegos(): Observable<JuegoResponse> {
     return this.http.get<JuegoResponse>(`${this.baseUrl}`)
   }
+  
   obtenerJuegosPorTermino(termino: string): Observable<JuegoResponse> {
     const url = `${this.baseUrl}&search=${termino}`;
+    console.log('URL de búsqueda:', url); // Para imprimir la URL construida
     return this.http.get<JuegoResponse>(url);
   }
 }

@@ -1,0 +1,19 @@
+.imagen-pequena {
+  max-height: 200px; /* Ajusta según tu preferencia */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  width: auto;
+  display: block;
+  margin: auto; /* Centra la imagen en caso de que sea más pequeña que el contenedor */
+}
+
+@media(min-width: 768px) { /* Para vistas más grandes, como tablets y desktops */
+  .imagen-pequena {
+    max-width: 100%; /* Asegura que la imagen no sobrepase el contenedor */
+  }
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+.header {
+  background-color: #333; /* O el color que prefieras */
+  color: #fff; /* O el color que prefieras para el texto */
+  padding: 10px 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px; /* O el tamaño que prefieras */
+}
+
+.search-bar {
+  /* Aquí puedes agregar estilos adicionales para tu barra de búsqueda si los necesitas */
+}
+
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas en pantalla grande */
+  gap: 10px; /* espacio entre elementos de la cuadrícula */
+}
+
+/* Adaptabilidad a tabletas */
+@media (max-width: 768px) {
+  .search-results {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tabletas */
+  }
+}
+
+/* Adaptabilidad a móviles */
+@media (max-width: 480px) {
+  .search-results {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+  }
+}
+
+.search-results img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

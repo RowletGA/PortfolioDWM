@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { JuegoResponse } from 'src/app/juego.interface';
+// principal.component.ts
+
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { JuegoResponse, Result } from 'src/app/juego.interface';
 import { JuegosService } from '../../juegos.service';
 
 @Component({
@@ -15,18 +17,33 @@ export class PrincipalComponent implements OnInit {
     previous: '',
     results: []
   };
+  juegoSeleccionado?: Result;
   
-  constructor(private juegosService : JuegosService) { }
+  constructor(private juegosService: JuegosService) { }
 
   ngOnInit(): void {
     this.getJuegos();
   }
 
   getJuegos(): void {
-    this.juegosService.obtenerJuegos().subscribe(juegos => (this.juegos = juegos));
+    this.juegosService.obtenerJuegos().subscribe({
+      next: (juegos) => (this.juegos = juegos),
+      error: (error) => console.error('Error obteniendo juegos:', error)
+    });
   }
 
-  buscarJuegos(termino: string): void {
-    this.juegosService.obtenerJuegosPorTermino(termino).subscribe(juegos => (this.juegos = juegos));
+  buscar(termino: string): void {
+    console.log('Método buscar en PrincipalComponent llamado con término:', termino); 
+    this.juegosService.obtenerJuegosPorTermino(termino).subscribe({
+      next: (response) => {
+        console.log('Respuesta del servicio:', response);
+        this.juegos = response;
+      },
+      error: (error) => console.error('Error en la búsqueda:', error)
+    });
+  }
+  
+  onSelect(juego: Result): void { 
+    this.juegoSeleccionado = juego; 
   }
 }

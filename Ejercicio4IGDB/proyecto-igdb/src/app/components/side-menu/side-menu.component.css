@@ -1,0 +1,14 @@
+.side-menu {
+    width: 250px; /* O el ancho que prefieras */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Debe ser el valor negativo del width */
+    background-color: #333; /* O el color que prefieras */
+    transition: left 0.3s ease; /* O la duración y función de ease que prefieras */
+  }
+  
+  .side-menu.open {
+    left: 0;
+  }
+  
