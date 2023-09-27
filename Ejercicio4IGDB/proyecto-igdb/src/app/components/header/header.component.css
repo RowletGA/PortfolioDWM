@@ -1,0 +1,83 @@
+.header {
+  background-color: #333; /* O el color que prefieras */
+  color: #fff; /* O el color que prefieras para el texto */
+  padding: 10px 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px; 
+}
+
+.search-bar {
+
+}
+
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas en pantalla grande */
+  gap: 10px; /* espacio entre elementos de la cuadrícula */
+}
+
+/* Adaptabilidad a tabletas */
+@media (max-width: 768px) {
+  .search-results {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tabletas */
+  }
+}
+
+/* Adaptabilidad a móviles */
+@media (max-width: 480px) {
+  .search-results {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+  }
+}
+
+.search-results img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.lista-juegos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Esto crea tres columnas de igual ancho */
+  gap: 16px; /* Esto añade un poco de espacio entre cada artículo de la grilla */
+}
+
+.juego-item {
+  overflow: hidden; 
+}
+
+.juego-item img {
+ 
+  width: 100%; /* Esto hará que la imagen ocupe el 100% del ancho de su contenedor padre. */
+  max-width: 200px; /* Puedes ajustar este valor a lo que necesites. */
+  max-height: 150px; /* Puedes ajustar este valor a lo que necesites. */
+  display: block; /* Esto eliminará cualquier margen no deseado debajo de la imagen. */
+  object-fit: cover; /* Esto hará que la imagen cubra el área del contenedor sin distorsionarse. */
+}
+
+
+@media(min-width: 600px) {
+  .lista-juegos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 768px) {
+  .lista-juegos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

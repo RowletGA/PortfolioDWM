@@ -1,3 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Juegos</a>
-</nav>
+<header class="header">
+  <div class="container">
+    <div class="menu-icon" (click)="toggleSideMenu()">
+      ☰
+    </div>
+    <div class="logo">
+      Steam Verde
+    </div>
+    <div class="search-bar">
+      <app-search-bar (onBuscar)="buscar($event)"></app-search-bar>
+    </div>
+  </div>
+  <app-side-menu></app-side-menu>
+
+  <div *ngIf="juegos && juegos.length > 0" class="search-results lista-juegos">
+    <div class="juego-item" *ngFor="let juego of juegos">
+      <img [src]="juego.background_image" alt="{{ juego.name }}" />
+      <div>{{ juego.name }}</div>
+    </div>
+  </div>
+</header>
+

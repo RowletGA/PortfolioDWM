@@ -1,7 +1,4 @@
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Buscar juego" [(ngModel)]="termino">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" (click)="buscar()">Buscar</button>
-    </div>
-  </div>
-  
+<form (submit)="buscar()">
+  <input [(ngModel)]="termino" name="termino" placeholder="Buscar juego" required />
+  <button type="submit">Buscar</button>
+</form>

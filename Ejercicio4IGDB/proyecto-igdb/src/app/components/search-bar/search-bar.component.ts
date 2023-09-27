@@ -7,15 +7,14 @@ import { JuegosService } from '../../juegos.service';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
-  
   termino: string = '';
-
-  // Declara un EventEmitter para notificar al componente padre cuando se realiza una búsqueda.
   @Output() onBuscar: EventEmitter<string> = new EventEmitter();
 
-  constructor(private juegosService: JuegosService) { }
-
   buscar(): void {
+    if(this.termino.trim() === '') return;
+    console.log('Método buscar llamado con término:', this.termino); // Aquí añades el console.log
     this.onBuscar.emit(this.termino);
   }
+  
+
 }

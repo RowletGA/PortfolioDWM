@@ -1,0 +1,5 @@
+<div *ngIf="juego"> <!-- Este div solo se renderizará si 'juego' tiene un valor -->
+    <h2>{{ juego.name }}</h2> <!-- Suponiendo que 'name' es una propiedad del objeto juego -->
+    <a [href]="juego.url" target="_blank">Ir al Juego</a> <!-- Suponiendo que 'url' es una propiedad del objeto juego -->
+  </div>
+  
