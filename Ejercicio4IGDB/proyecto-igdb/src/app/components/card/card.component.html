@@ -1,9 +1,13 @@
-<div class="card" style="width: 18rem;">
-    <img [src]="juego.background_image" class="card-img-top" alt="{{ juego.name }}">
-    <div class="card-body">
-      <h5 class="card-title">{{ juego.name }}</h5>
-      <p class="card-text">{{ juego.description }}</p>
-      <a href="#" class="btn btn-primary">Ir al juego</a>
-    </div>
-  </div>
-  
+
+<div class="card">
+<img [src]="juego.background_image" class="card-img-top" alt="{{ juego.name }}">
+<div class="card-details">
+  <h3>Título del juego</h3>
+  <p>Categoría</p>
+  <p>Descripción del juego.</p>
+</div>
+<div class="card-actions">
+  <button class="btn btn-primary details-button">Detalles</button>
+  <button class="btn btn-success buy-button">Comprar</button>
+</div>
+</div>

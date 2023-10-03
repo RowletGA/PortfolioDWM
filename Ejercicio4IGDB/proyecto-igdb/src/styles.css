@@ -1,2 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.navbar {
+    background-color: #1a1a1a; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-list li {
+    font-size: 18px;
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-input {
+    background-color: #333; /* Color de fondo del campo de búsqueda */
+    color: #ffffff; /* Color del texto del campo de búsqueda */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .search-button {
+    background-color: #ff4500; /* Color del botón de búsqueda */
+    color: #ffffff; /* Color del texto del botón de búsqueda */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #ff6a36; /* Cambio de color al pasar el cursor por encima */
+  }
+  

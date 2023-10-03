@@ -1,0 +1,44 @@
+
+.card {
+    background-color: #333; /* Color de fondo de la tarjeta */
+    color: #ffffff; /* Color del texto en la tarjeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-details h3 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .details-button,
+  .buy-button {
+    background-color: #ff4500; /* Color de fondo de los botones */
+    color: #ffffff; /* Color del texto de los botones */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .details-button:hover,
+  .buy-button:hover {
+    background-color: #ff6a36; /* Cambio de color al pasar el cursor por encima */
+  }
+  

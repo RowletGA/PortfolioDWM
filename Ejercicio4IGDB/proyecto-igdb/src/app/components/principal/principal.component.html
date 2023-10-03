@@ -1,18 +1,10 @@
-<!-- Header -->
 <app-header></app-header>
-
 <div class="container mt-4">
-  <!-- Barra de Búsqueda -->
-  <app-search-bar (onBuscar)="buscarJuegos($event)"></app-search-bar> <!-- Escucha el evento onBuscar -->
-
-  <!-- Cuerpo Principal -->
+  <app-search-bar (onBuscar)="buscar($event)"></app-search-bar>
   <div class="row">
-    <div class="col-md-3" *ngFor="let juego of juegos.results">
-      <!-- Card para cada juego -->
-      <app-card [juego]="juego"></app-card>
+    <div class="col-md-4 col-sm-6" *ngFor="let juego of juegos.results">
+      <app-card [juego]="juego" (verMas)="abrirModal(juego)"></app-card>
     </div>
   </div>
 </div>
-
-<!-- Footer -->
 <app-footer></app-footer>

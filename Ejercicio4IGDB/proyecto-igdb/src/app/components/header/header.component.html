@@ -1,3 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Juegos</a>
-</nav>
+<div class="navbar">
+  <ul class="nav-list">
+    <li><a routerLink="/">Inicio</a></li>
+    <li><a routerLink="/explorar">Explorar</a></li>
+    <!-- Agrega más elementos de menú según sea necesario -->
+  </ul>
+  <div class="search-bar">
+    <input [(ngModel)]="terminoBusqueda" placeholder="Buscar..." class="search-input">
+    <button (click)="buscarJuegos(terminoBusqueda)" class="search-button">Buscar</button>
+  </div>
+</div>

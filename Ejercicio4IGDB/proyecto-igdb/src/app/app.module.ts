@@ -11,6 +11,7 @@ import { CardComponent } from './components/card/card.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { DetalleComponent } from './components/detalle-juego/detalle-juego.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     CardComponent,
     ModalComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
