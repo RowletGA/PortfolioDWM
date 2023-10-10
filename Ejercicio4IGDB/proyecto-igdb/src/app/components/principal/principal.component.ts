@@ -14,7 +14,6 @@ export class PrincipalComponent implements OnInit {
     previous: '',
     results: []
   };
-
   constructor(private juegosService: JuegosService) { }
 
   ngOnInit(): void {
@@ -40,6 +39,5 @@ export class PrincipalComponent implements OnInit {
   }
 
   abrirModal(juego: Result): void {
-    // Aquí podrías abrir el modal con los detalles del juego
   }
 }

@@ -6,5 +6,6 @@
       <app-card [juego]="juego" (verMas)="abrirModal(juego)"></app-card>
     </div>
   </div>
+  <app-modal [juego]="juegoSeleccionado" *ngIf="mostrarModal"></app-modal>
 </div>
 <app-footer></app-footer>
